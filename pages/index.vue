@@ -49,7 +49,7 @@ const getDateRange = (period: string) => {
 };
 
 
-const fetchData = async (period: string) => {
+const fetchData = async (period: string): Promise<void> => {
   activePeriod.value = period;
   const { startDate, endDate } = getDateRange(period);
   try {
